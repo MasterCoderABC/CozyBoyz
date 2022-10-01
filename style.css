@@ -1,0 +1,124 @@
+@import url('http://fonts.cdnfonts.com/css/uni-sans-regular');
+  *{
+    box-sizing: border-box; 
+    list-style: none;
+  }
+
+  body{
+    font-family: 'Uni Sans Demo', sans-serif;
+    font-weight: 600;
+  }
+
+  .hidden{
+    display: none;
+  }
+
+  nav{
+    background: #5865F2;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    user-select: none;
+  }
+  
+  label.logo{
+    color: #23272A;
+    font-size: 35px;
+    line-height:80px;
+    padding: 0 10px;
+    font-weight:bold;
+  }
+
+  nav ul{
+    float:right;
+    margin-right: 20px;
+    padding:0;
+    margin:0;
+  }
+
+  nav ul li{
+    display: inline-block;
+    line-height:80px;
+    margin: 0 1px;
+  }
+
+  nav ul li a{
+    text-decoration: none;
+    color:#23272A;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+
+  a.active, a:hover{
+    background: #99AAB5;
+    transition: .5s;
+  }
+
+  .checkbtn{
+    font-size: 30px;
+    color: #404EED;
+    float:right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+
+  #check{
+    display:none;
+  }
+  
+  @media (max-width: 952px){
+    label.logo{
+        font-size:30px;
+        padding-left: 50px;
+    }
+    nav ul li a {
+        font-size:16px;
+    }
+  }
+
+  @media (max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position:fixed;
+        width:100%;
+        height:100vh;
+        background:#2c3e50;
+        top:80px;
+        left:0;
+        text-align: center;
+        left: -100%;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height:10px;
+    }
+
+    nav ul li a {
+      color: white;
+    }
+
+    .dropbtn{
+        display: none;
+    }
+
+    a:hover, a.active{
+        background: none;
+        color: #F6F6F6;
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
+  }
+
+  .images{
+    width:60px;
+    height:60px;
+  }
